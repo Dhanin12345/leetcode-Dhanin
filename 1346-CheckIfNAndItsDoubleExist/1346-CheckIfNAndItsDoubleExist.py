@@ -1,0 +1,12 @@
+# Last updated: 9/12/2026, 10:22:04 AM
+class Solution:
+    def checkIfExist(self, arr):
+        seen = set()
+
+        for num in arr:
+            if num * 2 in seen or (num % 2 == 0 and num // 2 in seen):
+                return True
+
+            seen.add(num)
+
+        return False
